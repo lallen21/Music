@@ -1,0 +1,81 @@
+/* CSS Variables */
+:root {
+    /* main UI color */
+    --plyr-color-main: #3498db; /* Bright blue */
+    /* audio controls background */
+    --plyr-audio-controls-background: #2980b9; /* Darker blue */
+    /* audio controls color */
+    --plyr-audio-control-color: #ecf0f1; /* Light gray */
+    /* font family for player */
+    --plyr-font-family: 'Roboto', sans-serif;
+    /* font size of player */
+    --plyr-font-size-time: 16px;
+
+    /* Additional customizations */
+    --plyr-audio-control-color-hover: #bdc3c7; /* Light gray on hover */
+    --plyr-audio-progress-buffered-background: #95a5a6; /* Gray */
+    --plyr-audio-range-track-background: #bdc3c7; /* Light gray */
+    --plyr-tooltip-background: #ecf0f1; /* Light gray */
+    --plyr-tooltip-color: #2c3e50; /* Dark blue */
+    --plyr-control-icon-size: 20px; /* Larger icon size */
+}
+
+body {
+    background: #34495e; /* Darker blue background */
+    color: #ecf0f1; /* Light gray text */
+    font-family: var(--plyr-font-family);
+}
+
+/* Layout */
+main {
+    /* Fixed width center align */
+    max-width: 60em;
+    margin-inline: auto;
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Gradient background */
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Soft shadow */
+}
+
+main img {
+    /* Fit image to container */
+    max-width: 100%;
+    display: block;
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+}
+
+/* Primary Content */
+article {
+    /* flow content horizontally */
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    text-align: center; /* Center-align content */
+}
+
+article section {
+    /* keep flex'd child same width */
+    flex: 1;
+    padding: 1em;
+    border-radius: 10px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+    backdrop-filter: blur(5px); /* Apply blur effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    color: #ecf0f1; /* Light gray text */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 2em;
+    color: #bdc3c7; /* Light gray text */
+}
+
+/* Media Queries */
+@media (max-width: 40em) {
+    main article {
+        flex-direction: column;
+    }
+}
